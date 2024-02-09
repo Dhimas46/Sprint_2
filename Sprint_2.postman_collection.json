@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "3ffddfd3-a4ee-45a7-9a23-882f93952efd",
+		"name": "Sprint_2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29448024"
+	},
+	"item": [
+		{
+			"name": "GET Provinces",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/search/provinces",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"search",
+						"provinces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AUTH Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "admin@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/auth/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET City",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/search/cities?province_id=1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"search",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "province_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Provinces by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/search/provinces?id=1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"search",
+						"provinces"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET City by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/search/cities?city_id=1",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"search",
+						"cities"
+					],
+					"query": [
+						{
+							"key": "city_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "1|yPgtXGcRaXbjwWA0wX26BmkA1hKAK1EYH4pRXyBIa5165807",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseurl",
+			"value": "http://127.0.0.1:8000/api"
+		}
+	]
+}

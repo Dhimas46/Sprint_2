@@ -31,5 +31,6 @@ return [
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
     'location_repository' => 'database',
+    // 'location_repository' => 'rajaongkir',
 
 ];
